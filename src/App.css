@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+}
+
+a {
+  color: rgb(213, 209, 239);
+  text-decoration: none;
+}
+
+.gradient__bg {
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgb(136, 140, 144) 0%,
+    rgb(187, 196, 208) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgb(196, 199, 202) 0%,
+    rgb(146, 148, 150) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 3% 25%,
+    rgb(200, 203, 207) 0%,
+    rgb(176, 176, 178) 100%
+  );
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgb(112, 116, 121) 0%,
+    rgb(30, 31, 32) 100%
+  );
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 3% 25%,
+    rgb(33, 71, 107) 0%,
+    rgb(246, 246, 246) 100%
+  );
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+/* Animation */
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+
+  .section__margin {
+    margin: 4rem;
+  }
+}
+
+/* Mobile Devices Screen */
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+
+  .section__margin {
+    margin: 4rem 2rem;
+  }
+}
